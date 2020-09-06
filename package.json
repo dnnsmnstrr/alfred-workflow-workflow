@@ -1,0 +1,41 @@
+{
+  "name": "alfred-workflow",
+  "version": "0.0.0",
+  "description": "An alfred workflow to help making workflows with alfy",
+  "license": "MIT",
+  "repository": "dnnsmnstrr/alfred-workflow",
+  "author": {
+    "name": "Dennis Muensterer",
+    "email": "dennismuensterer@gmail.com",
+    "url": "muensterer.xyz"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava",
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup",
+    "link": "./node_modules/.bin/alfred-link",
+    "unlink": "./node_modules/.bin/alfred-unlink"
+  },
+  "files": [
+    "index.js",
+    "icon.png",
+    "info.plist"
+  ],
+  "keywords": [
+    "alfred",
+    "workflow",
+    "alfy",
+    "yodawg"
+  ],
+  "dependencies": {
+    "alfy": "^0.6.0"
+  },
+  "devDependencies": {
+    "alfy-test": "^0.3.0",
+    "ava": "^0.18.0",
+    "xo": "^0.17.0"
+  }
+}

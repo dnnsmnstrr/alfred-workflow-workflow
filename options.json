@@ -1,0 +1,22 @@
+[
+  {
+    "title": "App Icon",
+    "subtitle": "Get Icons from macOS Apps",
+    "arg": "icon"
+  },
+  {
+    "title": "Favicon",
+    "subtitle": "Get favicons from websites",
+    "arg": "favicon"
+  },
+  {
+    "title": "Atom",
+    "subtitle": "Open Workflows in Atom",
+    "arg": "atom:~/.dotfiles/alfred/workflows/"
+  },
+  {
+    "title": "System Icons",
+    "subtitle": "Get Icons for Alfy Workflows",
+    "arg": "icns"
+  }
+]
