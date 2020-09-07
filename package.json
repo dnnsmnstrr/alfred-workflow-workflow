@@ -17,7 +17,8 @@
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup",
     "link": "./node_modules/.bin/alfred-link",
-    "unlink": "./node_modules/.bin/alfred-unlink"
+    "unlink": "./node_modules/.bin/alfred-unlink",
+    "local": "yarn install --ignore-scripts"
   },
   "files": [
     "index.js",
