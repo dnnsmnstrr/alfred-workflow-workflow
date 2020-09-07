@@ -579,7 +579,7 @@ open -na Atom $query</string>
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>script</key>
-				<string>sh acshell.sh "{query}" --extract</string>
+				<string>sh ./src/acshell.sh "{query}" --extract</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -749,7 +749,7 @@ open -na Atom $query</string>
 				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
-				<string>sh acshell.sh "{query}" --download</string>
+				<string>sh ./src/acshell.sh "{query}" --download</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1274,7 +1274,7 @@ echo -n $query
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<integer>255</integer>
+			<integer>240</integer>
 			<key>ypos</key>
 			<integer>350</integer>
 		</dict>
