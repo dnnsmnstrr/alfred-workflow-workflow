@@ -169,9 +169,9 @@
 				<key>destinationuid</key>
 				<string>63B6CF29-DC56-4988-ACE3-4FD6A94AB4BB</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string>Open workflow path in Atom</string>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -179,7 +179,7 @@
 				<key>destinationuid</key>
 				<string>9B19ACCA-B24F-43C0-AE88-B9BC44D34449</string>
 				<key>modifiers</key>
-				<integer>0</integer>
+				<integer>1048576</integer>
 				<key>modifiersubtext</key>
 				<string></string>
 				<key>vitoclose</key>
@@ -1055,6 +1055,25 @@ open -na Atom $query</string>
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
+				<string>'{snippet:query}'</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>32612F50-7456-4CAD-A217-70F123320EBE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
 				<string>{snippet:query}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
@@ -1101,25 +1120,6 @@ open -na Atom $query</string>
 			<string>F6C45661-B4CE-427F-950F-7D080B0E8D62</string>
 			<key>version</key>
 			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>'{snippet:query}'</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>32612F50-7456-4CAD-A217-70F123320EBE</string>
-			<key>version</key>
-			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
