@@ -180,7 +180,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>220C4662-D1D2-47DE-9D44-5C9DBCC287A0</string>
+				<string>63B6CF29-DC56-4988-ACE3-4FD6A94AB4BB</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -190,11 +190,11 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>63B6CF29-DC56-4988-ACE3-4FD6A94AB4BB</string>
+				<string>220C4662-D1D2-47DE-9D44-5C9DBCC287A0</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
-				<string>Open in Atom</string>
+				<string>Open in alfred</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -472,7 +472,7 @@
 				<key>escaping</key>
 				<integer>102</integer>
 				<key>keyword</key>
-				<string>wf</string>
+				<string>workflow</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -490,7 +490,7 @@
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
-				<string></string>
+				<string>Tools for creating workflows with alfy</string>
 				<key>title</key>
 				<string>Workflow Helper</string>
 				<key>type</key>
@@ -504,6 +504,84 @@
 			<string>61B12F44-6635-478C-A2DA-4DFA62BE47B6</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+open -na Atom $query</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>63B6CF29-DC56-4988-ACE3-4FD6A94AB4BB</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{snippet:query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>5C2C93E7-1348-40E1-8DAB-B13425062330</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>bundle_id</string>
+				<key>keyword</key>
+				<string>qry</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>F6C45661-B4CE-427F-950F-7D080B0E8D62</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>:</string>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>EB5B06B9-0523-4F03-965C-1268E5F88889</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -550,48 +628,6 @@ end theSplit</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>delimiter</key>
-				<string>:</string>
-				<key>trimarguments</key>
-				<true/>
-				<key>variableprefix</key>
-				<string>split</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.split</string>
-			<key>uid</key>
-			<string>EB5B06B9-0523-4F03-965C-1268E5F88889</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>query=$1
-
-open -na Atom $query</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>63B6CF29-DC56-4988-ACE3-4FD6A94AB4BB</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>argument</key>
 				<string>{var:WORKFLOWS_DIRECTORY}</string>
 				<key>passthroughargument</key>
@@ -603,6 +639,42 @@ open -na Atom $query</string>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>088CCB8C-6675-41AB-BA04-297DFDD61F84</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>'{snippet:query}'</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>32612F50-7456-4CAD-A217-70F123320EBE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<true/>
+				<key>focusedappvariablename</key>
+				<string>com.runningwithcrayons.Alfred</string>
+				<key>keyword</key>
+				<string>sqr</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>F5F1AD94-4C74-4BF1-899D-0318CCECD96E</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -779,6 +851,42 @@ open -na Atom $query</string>
 			<string>391FEAC0-1A22-43D8-A2A7-1DB93761B5A8</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string>com.runningwithcrayons.Alfred</string>
+				<key>keyword</key>
+				<string>splt</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>157E4F33-FB00-4083-B66C-6C685B447C4F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{snippet:split}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>15690745-F422-4440-8CE3-BFD8C926AB22</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1165,114 +1273,6 @@ echo -n $query
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>'{snippet:query}'</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>32612F50-7456-4CAD-A217-70F123320EBE</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{snippet:query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>5C2C93E7-1348-40E1-8DAB-B13425062330</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string>com.runningwithcrayons.Alfred</string>
-				<key>keyword</key>
-				<string>splt</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.snippet</string>
-			<key>uid</key>
-			<string>157E4F33-FB00-4083-B66C-6C685B447C4F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{snippet:split}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>15690745-F422-4440-8CE3-BFD8C926AB22</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string>com.runningwithcrayons.Alfred</string>
-				<key>keyword</key>
-				<string>sqr</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.snippet</string>
-			<key>uid</key>
-			<string>F5F1AD94-4C74-4BF1-899D-0318CCECD96E</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>focusedappvariable</key>
-				<false/>
-				<key>focusedappvariablename</key>
-				<string>com.runningwithcrayons.Alfred</string>
-				<key>keyword</key>
-				<string>qry</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.snippet</string>
-			<key>uid</key>
-			<string>F6C45661-B4CE-427F-950F-7D080B0E8D62</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -1445,9 +1445,9 @@ echo -n $query
 			<key>note</key>
 			<string>(requires snippet)</string>
 			<key>xpos</key>
-			<integer>1305</integer>
+			<integer>1085</integer>
 			<key>ypos</key>
-			<integer>845</integer>
+			<integer>325</integer>
 		</dict>
 		<key>157E4F33-FB00-4083-B66C-6C685B447C4F</key>
 		<dict>
@@ -1456,9 +1456,9 @@ echo -n $query
 			<key>note</key>
 			<string>split var</string>
 			<key>xpos</key>
-			<integer>1205</integer>
+			<integer>985</integer>
 			<key>ypos</key>
-			<integer>845</integer>
+			<integer>325</integer>
 		</dict>
 		<key>1E9697F3-77CA-4114-8428-59C91900396C</key>
 		<dict>
@@ -1480,7 +1480,7 @@ echo -n $query
 			<key>xpos</key>
 			<integer>805</integer>
 			<key>ypos</key>
-			<integer>10</integer>
+			<integer>135</integer>
 		</dict>
 		<key>239A1018-62B3-4756-A2E3-171FE84854E0</key>
 		<dict>
@@ -1507,9 +1507,9 @@ echo -n $query
 			<key>note</key>
 			<string>(uses snippet)</string>
 			<key>xpos</key>
-			<integer>1060</integer>
+			<integer>1085</integer>
 			<key>ypos</key>
-			<integer>845</integer>
+			<integer>175</integer>
 		</dict>
 		<key>391FEAC0-1A22-43D8-A2A7-1DB93761B5A8</key>
 		<dict>
@@ -1554,9 +1554,9 @@ echo -n $query
 			<key>note</key>
 			<string>(requires snippet)</string>
 			<key>xpos</key>
-			<integer>815</integer>
+			<integer>1090</integer>
 			<key>ypos</key>
-			<integer>845</integer>
+			<integer>25</integer>
 		</dict>
 		<key>61B12F44-6635-478C-A2DA-4DFA62BE47B6</key>
 		<dict>
@@ -1585,7 +1585,7 @@ echo -n $query
 			<key>xpos</key>
 			<integer>805</integer>
 			<key>ypos</key>
-			<integer>135</integer>
+			<integer>10</integer>
 		</dict>
 		<key>6486D0FE-F65A-4E3C-92A2-D1CA112078A2</key>
 		<dict>
@@ -1619,9 +1619,9 @@ echo -n $query
 			<key>note</key>
 			<string>alfy</string>
 			<key>xpos</key>
-			<integer>800</integer>
+			<integer>615</integer>
 			<key>ypos</key>
-			<integer>1005</integer>
+			<integer>950</integer>
 		</dict>
 		<key>972C9FB4-D19F-494C-B4D4-79C3054E39F8</key>
 		<dict>
@@ -1646,9 +1646,9 @@ echo -n $query
 			<key>note</key>
 			<string>handler</string>
 			<key>xpos</key>
-			<integer>950</integer>
+			<integer>765</integer>
 			<key>ypos</key>
-			<integer>1005</integer>
+			<integer>950</integer>
 		</dict>
 		<key>AE077581-924E-4A47-8CA7-C804F5FAF70B</key>
 		<dict>
@@ -1749,9 +1749,9 @@ echo -n $query
 			<key>note</key>
 			<string>fallback search '{query}'</string>
 			<key>xpos</key>
-			<integer>960</integer>
+			<integer>985</integer>
 			<key>ypos</key>
-			<integer>845</integer>
+			<integer>175</integer>
 		</dict>
 		<key>F6C45661-B4CE-427F-950F-7D080B0E8D62</key>
 		<dict>
@@ -1760,9 +1760,9 @@ echo -n $query
 			<key>note</key>
 			<string>autocomplete {query}</string>
 			<key>xpos</key>
-			<integer>715</integer>
+			<integer>985</integer>
 			<key>ypos</key>
-			<integer>845</integer>
+			<integer>25</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
