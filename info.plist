@@ -163,6 +163,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>8C9EB39E-6A81-4597-BCBB-954BFC0347C0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A65CF325-8B3F-4BEF-9209-87F4A0471211</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>972C9FB4-D19F-494C-B4D4-79C3054E39F8</key>
 		<array>
 			<dict>
@@ -1264,6 +1277,76 @@ echo -n $query
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node handler.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A65CF325-8B3F-4BEF-9209-87F4A0471211</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8C9EB39E-6A81-4597-BCBB-954BFC0347C0</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
@@ -1468,6 +1551,15 @@ echo -n $query
 			<key>ypos</key>
 			<integer>220</integer>
 		</dict>
+		<key>8C9EB39E-6A81-4597-BCBB-954BFC0347C0</key>
+		<dict>
+			<key>note</key>
+			<string>alfy</string>
+			<key>xpos</key>
+			<integer>120</integer>
+			<key>ypos</key>
+			<integer>1245</integer>
+		</dict>
 		<key>972C9FB4-D19F-494C-B4D4-79C3054E39F8</key>
 		<dict>
 			<key>colorindex</key>
@@ -1485,6 +1577,15 @@ echo -n $query
 			<integer>805</integer>
 			<key>ypos</key>
 			<integer>150</integer>
+		</dict>
+		<key>A65CF325-8B3F-4BEF-9209-87F4A0471211</key>
+		<dict>
+			<key>note</key>
+			<string>handler</string>
+			<key>xpos</key>
+			<integer>270</integer>
+			<key>ypos</key>
+			<integer>1245</integer>
 		</dict>
 		<key>AE077581-924E-4A47-8CA7-C804F5FAF70B</key>
 		<dict>
