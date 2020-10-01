@@ -86,6 +86,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>23BFC101-89F7-4421-AAD7-E4EF6130432F</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>541C7CF2-962D-4A2D-9CDE-2F0D7A4219CE</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>26878E53-FCDA-43DB-AFC7-F71022C7D2BC</key>
 		<array>
 			<dict>
@@ -121,6 +134,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>sourceoutputuid</key>
+				<string>190E7B29-2908-4D14-9A29-033750DEAA62</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -162,7 +177,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>E9E62830-E12C-4D4A-805C-72E1153832B4</string>
+				<string>E8F2F6A1-0763-4297-A926-6EF3903A60C3</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -256,6 +271,16 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>9B19ACCA-B24F-43C0-AE88-B9BC44D34449</string>
+				<key>modifiers</key>
+				<integer>1572864</integer>
+				<key>modifiersubtext</key>
+				<string>Browse files</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>C802E847-D9E1-4AEE-B4CB-150C888EE0BB</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
@@ -271,16 +296,6 @@
 				<integer>8388608</integer>
 				<key>modifiersubtext</key>
 				<string>Enable/Disable extension</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>9B19ACCA-B24F-43C0-AE88-B9BC44D34449</string>
-				<key>modifiers</key>
-				<integer>1572864</integer>
-				<key>modifiersubtext</key>
-				<string>Browse files</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -347,7 +362,7 @@
 				<false/>
 			</dict>
 		</array>
-		<key>E9E62830-E12C-4D4A-805C-72E1153832B4</key>
+		<key>E8F2F6A1-0763-4297-A926-6EF3903A60C3</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
@@ -356,26 +371,6 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>D96EC7EE-E86A-4B0A-91B4-119C3F8B15EE</string>
-				<key>modifiers</key>
-				<integer>1048576</integer>
-				<key>modifiersubtext</key>
-				<string>Use js script</string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>114F2509-737A-441F-84ED-7A9DF59D72DB</string>
-				<key>modifiers</key>
-				<integer>131072</integer>
-				<key>modifiersubtext</key>
-				<string>Open favicon in browser</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -622,6 +617,23 @@ open -na Atom $query</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string>{var:WORKFLOWS_DIRECTORY}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>088CCB8C-6675-41AB-BA04-297DFDD61F84</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -660,23 +672,6 @@ end theSplit</string>
 			<string>220C4662-D1D2-47DE-9D44-5C9DBCC287A0</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argument</key>
-				<string>{var:WORKFLOWS_DIRECTORY}</string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>088CCB8C-6675-41AB-BA04-297DFDD61F84</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -816,6 +811,20 @@ end theSplit</string>
 						<key>matchmode</key>
 						<integer>0</integer>
 						<key>matchstring</key>
+						<string>search</string>
+						<key>outputlabel</key>
+						<string>search</string>
+						<key>uid</key>
+						<string>190E7B29-2908-4D14-9A29-033750DEAA62</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:split1}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
 						<string>atom</string>
 						<key>outputlabel</key>
 						<string>atom</string>
@@ -866,7 +875,7 @@ end theSplit</string>
 					</dict>
 				</array>
 				<key>elselabel</key>
-				<string>search</string>
+				<string></string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -911,6 +920,25 @@ end theSplit</string>
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
+				<string>{snippet:split1}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>541C7CF2-962D-4A2D-9CDE-2F0D7A4219CE</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
 				<string>{snippet:split}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
@@ -923,6 +951,23 @@ end theSplit</string>
 			<string>15690745-F422-4440-8CE3-BFD8C926AB22</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string>com.runningwithcrayons.Alfred</string>
+				<key>keyword</key>
+				<string>spl1</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>23BFC101-89F7-4421-AAD7-E4EF6130432F</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1069,246 +1114,6 @@ end theSplit</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Export</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>D8C9CCA4-8A3F-4671-97BE-33E28142D52B</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>36</integer>
-				<key>script</key>
-				<string>python src/workflow/export.py "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>C802E847-D9E1-4AEE-B4CB-150C888EE0BB</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>36</integer>
-				<key>script</key>
-				<string>python src/workflow/toggle.py "{query}"</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>0E6F9DDE-D832-43CF-9AF1-FF7DE1F57335</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Toggle visibility</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>62B1A97F-6362-445E-8B03-6AB67D5D6714</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>6486D0FE-F65A-4E3C-92A2-D1CA112078A2</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>alfredfiltersresults</key>
-				<false/>
-				<key>alfredfiltersresultsmatchmode</key>
-				<integer>0</integer>
-				<key>argumenttreatemptyqueryasnil</key>
-				<true/>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>keyword</key>
-				<string>icns</string>
-				<key>queuedelaycustom</key>
-				<integer>3</integer>
-				<key>queuedelayimmediatelyinitially</key>
-				<true/>
-				<key>queuedelaymode</key>
-				<integer>0</integer>
-				<key>queuemode</key>
-				<integer>1</integer>
-				<key>runningsubtext</key>
-				<string>⛏ Digging for icons...</string>
-				<key>script</key>
-				<string>./node_modules/.bin/run-node ./src/icns.js "$1"</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Search for icons in /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/</string>
-				<key>title</key>
-				<string>Get system icon</string>
-				<key>type</key>
-				<integer>0</integer>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.scriptfilter</string>
-			<key>uid</key>
-			<string>B379D234-A7DE-429B-AA8A-0295D00A40A9</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>path</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.browseinalfred</string>
-			<key>uid</key>
-			<string>9B19ACCA-B24F-43C0-AE88-B9BC44D34449</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>open {query}</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>1E9697F3-77CA-4114-8428-59C91900396C</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttype</key>
-				<integer>0</integer>
-				<key>keyword</key>
-				<string>favicon</string>
-				<key>subtext</key>
-				<string>Saves to ~/Downloads</string>
-				<key>text</key>
-				<string>Get favicon from url</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>E9E62830-E12C-4D4A-805C-72E1153832B4</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>102</integer>
-				<key>script</key>
-				<string>query=$1
-
-echo -n $query
-
-/usr/local/bin/wget $query/favicon.ico --directory-prefix=$HOME/Downloads/</string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>6B179777-691E-4892-A438-444FA18F16B2</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtextrtf</key>
@@ -1396,6 +1201,272 @@ echo -n $query
 			<string>201692E1-FEF4-4AD8-86BE-EBFBB559AABB</string>
 			<key>version</key>
 			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>path</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.browseinalfred</string>
+			<key>uid</key>
+			<string>9B19ACCA-B24F-43C0-AE88-B9BC44D34449</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>6486D0FE-F65A-4E3C-92A2-D1CA112078A2</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>icns</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>⛏ Digging for icons...</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node ./src/icns.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Search for icons in /System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/</string>
+				<key>title</key>
+				<string>Get system icon</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>B379D234-A7DE-429B-AA8A-0295D00A40A9</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Export</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>D8C9CCA4-8A3F-4671-97BE-33E28142D52B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>script</key>
+				<string>python src/workflow/export.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>C802E847-D9E1-4AEE-B4CB-150C888EE0BB</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open {query}</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1E9697F3-77CA-4114-8428-59C91900396C</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+
+/usr/local/bin/wget $query --directory-prefix=$HOME/Downloads/</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>6B179777-691E-4892-A438-444FA18F16B2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>keyword</key>
+				<string>favicon</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Loading favicons</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node src/favicon.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Get favicons for a url</string>
+				<key>title</key>
+				<string>Download favicons for '{query}'</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>E8F2F6A1-0763-4297-A926-6EF3903A60C3</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>36</integer>
+				<key>script</key>
+				<string>python src/workflow/toggle.py "{query}"</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>0E6F9DDE-D832-43CF-9AF1-FF7DE1F57335</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Toggle visibility</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>62B1A97F-6362-445E-8B03-6AB67D5D6714</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1554,16 +1625,16 @@ echo -n $query
 			<key>xpos</key>
 			<integer>805</integer>
 			<key>ypos</key>
-			<integer>590</integer>
+			<integer>830</integer>
 		</dict>
 		<key>114F2509-737A-441F-84ED-7A9DF59D72DB</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>12</integer>
 			<key>xpos</key>
-			<integer>315</integer>
+			<integer>230</integer>
 			<key>ypos</key>
-			<integer>1055</integer>
+			<integer>1040</integer>
 		</dict>
 		<key>15690745-F422-4440-8CE3-BFD8C926AB22</key>
 		<dict>
@@ -1594,16 +1665,20 @@ echo -n $query
 			<key>note</key>
 			<string>open in finder</string>
 			<key>xpos</key>
-			<integer>525</integer>
+			<integer>435</integer>
 			<key>ypos</key>
 			<integer>730</integer>
 		</dict>
 		<key>201692E1-FEF4-4AD8-86BE-EBFBB559AABB</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>modifier</string>
 			<key>xpos</key>
-			<integer>1040</integer>
+			<integer>1070</integer>
 			<key>ypos</key>
-			<integer>905</integer>
+			<integer>475</integer>
 		</dict>
 		<key>220C4662-D1D2-47DE-9D44-5C9DBCC287A0</key>
 		<dict>
@@ -1614,7 +1689,7 @@ echo -n $query
 			<key>xpos</key>
 			<integer>805</integer>
 			<key>ypos</key>
-			<integer>135</integer>
+			<integer>155</integer>
 		</dict>
 		<key>239A1018-62B3-4756-A2E3-171FE84854E0</key>
 		<dict>
@@ -1624,6 +1699,17 @@ echo -n $query
 			<integer>380</integer>
 			<key>ypos</key>
 			<integer>465</integer>
+		</dict>
+		<key>23BFC101-89F7-4421-AAD7-E4EF6130432F</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>split var</string>
+			<key>xpos</key>
+			<integer>1235</integer>
+			<key>ypos</key>
+			<integer>325</integer>
 		</dict>
 		<key>26878E53-FCDA-43DB-AFC7-F71022C7D2BC</key>
 		<dict>
@@ -1649,10 +1735,12 @@ echo -n $query
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
+			<key>note</key>
+			<string>Open in Finder</string>
 			<key>xpos</key>
 			<integer>805</integer>
 			<key>ypos</key>
-			<integer>260</integer>
+			<integer>300</integer>
 		</dict>
 		<key>422086DC-A077-4B5F-912A-D9F3F76ECC79</key>
 		<dict>
@@ -1677,16 +1765,31 @@ echo -n $query
 			<key>colorindex</key>
 			<integer>12</integer>
 			<key>xpos</key>
-			<integer>355</integer>
+			<integer>265</integer>
 			<key>ypos</key>
-			<integer>1025</integer>
+			<integer>1010</integer>
+		</dict>
+		<key>541C7CF2-962D-4A2D-9CDE-2F0D7A4219CE</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>(requires snippet)</string>
+			<key>xpos</key>
+			<integer>1335</integer>
+			<key>ypos</key>
+			<integer>325</integer>
 		</dict>
 		<key>5627C1BF-AF4C-45A5-B335-44BB92B42148</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>Generate</string>
 			<key>xpos</key>
-			<integer>950</integer>
+			<integer>980</integer>
 			<key>ypos</key>
-			<integer>905</integer>
+			<integer>475</integer>
 		</dict>
 		<key>5C2C93E7-1348-40E1-8DAB-B13425062330</key>
 		<dict>
@@ -1715,14 +1818,14 @@ echo -n $query
 			<key>xpos</key>
 			<integer>1005</integer>
 			<key>ypos</key>
-			<integer>590</integer>
+			<integer>830</integer>
 		</dict>
 		<key>63B6CF29-DC56-4988-ACE3-4FD6A94AB4BB</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>note</key>
-			<string>open in atom</string>
+			<string>Open in Atom</string>
 			<key>xpos</key>
 			<integer>805</integer>
 			<key>ypos</key>
@@ -1733,7 +1836,7 @@ echo -n $query
 			<key>colorindex</key>
 			<integer>3</integer>
 			<key>xpos</key>
-			<integer>525</integer>
+			<integer>435</integer>
 			<key>ypos</key>
 			<integer>615</integer>
 		</dict>
@@ -1742,9 +1845,9 @@ echo -n $query
 			<key>colorindex</key>
 			<integer>12</integer>
 			<key>xpos</key>
-			<integer>355</integer>
+			<integer>265</integer>
 			<key>ypos</key>
-			<integer>795</integer>
+			<integer>780</integer>
 		</dict>
 		<key>775763A0-A467-4C0E-96C9-FD8192AF83A2</key>
 		<dict>
@@ -1757,17 +1860,21 @@ echo -n $query
 		</dict>
 		<key>7EC673E2-9384-474E-A43E-1FF366BA6906</key>
 		<dict>
+			<key>colorindex</key>
+			<integer>9</integer>
+			<key>note</key>
+			<string>Objects</string>
 			<key>xpos</key>
-			<integer>1145</integer>
+			<integer>1165</integer>
 			<key>ypos</key>
-			<integer>905</integer>
+			<integer>475</integer>
 		</dict>
 		<key>8C9EB39E-6A81-4597-BCBB-954BFC0347C0</key>
 		<dict>
 			<key>note</key>
 			<string>alfy</string>
 			<key>xpos</key>
-			<integer>615</integer>
+			<integer>530</integer>
 			<key>ypos</key>
 			<integer>950</integer>
 		</dict>
@@ -1776,7 +1883,7 @@ echo -n $query
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>280</integer>
+			<integer>295</integer>
 			<key>ypos</key>
 			<integer>10</integer>
 		</dict>
@@ -1787,14 +1894,14 @@ echo -n $query
 			<key>xpos</key>
 			<integer>805</integer>
 			<key>ypos</key>
-			<integer>710</integer>
+			<integer>585</integer>
 		</dict>
 		<key>A65CF325-8B3F-4BEF-9209-87F4A0471211</key>
 		<dict>
 			<key>note</key>
 			<string>handler</string>
 			<key>xpos</key>
-			<integer>765</integer>
+			<integer>680</integer>
 			<key>ypos</key>
 			<integer>950</integer>
 		</dict>
@@ -1814,7 +1921,7 @@ echo -n $query
 			<key>note</key>
 			<string>alfy</string>
 			<key>xpos</key>
-			<integer>315</integer>
+			<integer>225</integer>
 			<key>ypos</key>
 			<integer>615</integer>
 		</dict>
@@ -1825,7 +1932,7 @@ echo -n $query
 			<key>xpos</key>
 			<integer>805</integer>
 			<key>ypos</key>
-			<integer>480</integer>
+			<integer>705</integer>
 		</dict>
 		<key>CBA1FC96-5250-4108-92BF-CDA798E14435</key>
 		<dict>
@@ -1840,10 +1947,12 @@ echo -n $query
 		<dict>
 			<key>colorindex</key>
 			<integer>8</integer>
+			<key>note</key>
+			<string>Launch first keyword</string>
 			<key>xpos</key>
 			<integer>805</integer>
 			<key>ypos</key>
-			<integer>370</integer>
+			<integer>445</integer>
 		</dict>
 		<key>D8C9CCA4-8A3F-4671-97BE-33E28142D52B</key>
 		<dict>
@@ -1852,25 +1961,23 @@ echo -n $query
 			<key>xpos</key>
 			<integer>1005</integer>
 			<key>ypos</key>
-			<integer>480</integer>
+			<integer>705</integer>
 		</dict>
 		<key>D96EC7EE-E86A-4B0A-91B4-119C3F8B15EE</key>
 		<dict>
 			<key>colorindex</key>
 			<integer>12</integer>
 			<key>xpos</key>
-			<integer>355</integer>
+			<integer>265</integer>
 			<key>ypos</key>
-			<integer>910</integer>
+			<integer>895</integer>
 		</dict>
-		<key>E9E62830-E12C-4D4A-805C-72E1153832B4</key>
+		<key>E8F2F6A1-0763-4297-A926-6EF3903A60C3</key>
 		<dict>
-			<key>colorindex</key>
-			<integer>12</integer>
 			<key>xpos</key>
-			<integer>105</integer>
+			<integer>115</integer>
 			<key>ypos</key>
-			<integer>790</integer>
+			<integer>780</integer>
 		</dict>
 		<key>EB5B06B9-0523-4F03-965C-1268E5F88889</key>
 		<dict>

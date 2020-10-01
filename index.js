@@ -13,7 +13,7 @@ const options = [
 	{
 		title: 'Favicon',
 		subtitle: 'Get favicons from websites',
-		arg: 'favicon'
+		arg: `favicon:${query}`
 	},
 	{
 		title: 'Atom',
