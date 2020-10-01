@@ -103,6 +103,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>972C9FB4-D19F-494C-B4D4-79C3054E39F8</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>088CCB8C-6675-41AB-BA04-297DFDD61F84</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -146,6 +156,19 @@
 				<string></string>
 				<key>sourceoutputuid</key>
 				<string>0C1C09A2-9987-4A4F-99C6-3C241423A2B1</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>5627C1BF-AF4C-45A5-B335-44BB92B42148</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>201692E1-FEF4-4AD8-86BE-EBFBB559AABB</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -645,25 +668,6 @@ end theSplit</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>'{snippet:query}'</string>
-				<key>ignoredynamicplaceholders</key>
-				<false/>
-				<key>transient</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>32612F50-7456-4CAD-A217-70F123320EBE</string>
-			<key>version</key>
-			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>focusedappvariable</key>
 				<true/>
 				<key>focusedappvariablename</key>
@@ -682,7 +686,7 @@ end theSplit</string>
 			<key>config</key>
 			<dict>
 				<key>argument</key>
-				<string></string>
+				<string>{var:split2}</string>
 				<key>passthroughargument</key>
 				<false/>
 				<key>variables</key>
@@ -694,6 +698,25 @@ end theSplit</string>
 			<string>26878E53-FCDA-43DB-AFC7-F71022C7D2BC</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>'{snippet:query}'</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>32612F50-7456-4CAD-A217-70F123320EBE</string>
+			<key>version</key>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -830,7 +853,7 @@ end theSplit</string>
 					</dict>
 				</array>
 				<key>elselabel</key>
-				<string>else</string>
+				<string>search</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -1273,6 +1296,70 @@ echo -n $query
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>keyword</key>
+				<string>mods</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.snippet</string>
+			<key>uid</key>
+			<string>5627C1BF-AF4C-45A5-B335-44BB92B42148</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node src/mods.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>201692E1-FEF4-4AD8-86BE-EBFBB559AABB</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -1471,6 +1558,13 @@ echo -n $query
 			<key>ypos</key>
 			<integer>730</integer>
 		</dict>
+		<key>201692E1-FEF4-4AD8-86BE-EBFBB559AABB</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1040</integer>
+			<key>ypos</key>
+			<integer>905</integer>
+		</dict>
 		<key>220C4662-D1D2-47DE-9D44-5C9DBCC287A0</key>
 		<dict>
 			<key>colorindex</key>
@@ -1546,6 +1640,13 @@ echo -n $query
 			<integer>355</integer>
 			<key>ypos</key>
 			<integer>1025</integer>
+		</dict>
+		<key>5627C1BF-AF4C-45A5-B335-44BB92B42148</key>
+		<dict>
+			<key>xpos</key>
+			<integer>950</integer>
+			<key>ypos</key>
+			<integer>905</integer>
 		</dict>
 		<key>5C2C93E7-1348-40E1-8DAB-B13425062330</key>
 		<dict>

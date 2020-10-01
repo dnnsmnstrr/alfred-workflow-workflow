@@ -38,8 +38,9 @@ function isValidUrl(string) {
 }
 
 module.exports = {
-	readData,
-	getOptions,
+	getIcon,
+	getAppIcon,
+	getAsset,
 	capitalize,
 	splitInput,
 	isValidUrl
