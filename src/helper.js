@@ -19,7 +19,7 @@ const getAsset = assetName => {
 	};
 };
 
-function splitInput(input = alfy.input, splitter = ' ') {
+function splitInput(splitter = ' ', input = alfy.input) {
 	return input.split(splitter);
 }
 
@@ -47,7 +47,10 @@ module.exports = {
 };
 
 /*
-USAGE:
+IMPORT:
 const {splitInput} = require('./helper');
-const [command, domain, ...restInput] = splitInput(alfy.input)
+
+USAGE:
+const [command, ...restInput] = splitInput()
+const [input, query, ...restInput] = splitInput(':') // Custom splitter
 */
