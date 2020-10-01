@@ -73,6 +73,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>201692E1-FEF4-4AD8-86BE-EBFBB559AABB</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>7EC673E2-9384-474E-A43E-1FF366BA6906</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>26878E53-FCDA-43DB-AFC7-F71022C7D2BC</key>
 		<array>
 			<dict>
@@ -458,7 +471,7 @@
 				<key>runningsubtext</key>
 				<string>loading...</string>
 				<key>script</key>
-				<string>python ./src/main.py "{query}"</string>
+				<string>python ./src/workflow/main.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -769,7 +782,7 @@ end theSplit</string>
 				<key>runningsubtext</key>
 				<string>Please wait…</string>
 				<key>script</key>
-				<string>sh ./src/acshell.sh "{query}" --start</string>
+				<string>sh ./src/icon/acshell.sh "{query}" --start</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -975,7 +988,7 @@ end theSplit</string>
 				<key>runningsubtext</key>
 				<string>Please wait…</string>
 				<key>script</key>
-				<string>python ./src/acpython.py "{query}" --list</string>
+				<string>python ./src/icon/acpython.py "{query}" --list</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1004,7 +1017,7 @@ end theSplit</string>
 				<key>escaping</key>
 				<integer>36</integer>
 				<key>script</key>
-				<string>python launch.py "{query}"</string>
+				<string>python src/workflow/launch.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1018,27 +1031,6 @@ end theSplit</string>
 			<string>D764FA7A-FE21-4B1C-B0F8-ED2724350435</string>
 			<key>version</key>
 			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Export</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>D8C9CCA4-8A3F-4671-97BE-33E28142D52B</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1077,12 +1069,33 @@ end theSplit</string>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Export</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>D8C9CCA4-8A3F-4671-97BE-33E28142D52B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
 				<integer>36</integer>
 				<key>script</key>
-				<string>python export.py "{query}"</string>
+				<string>python src/workflow/export.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1105,7 +1118,7 @@ end theSplit</string>
 				<key>escaping</key>
 				<integer>36</integer>
 				<key>script</key>
-				<string>python toggle.py "{query}"</string>
+				<string>python src/workflow/toggle.py "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -1296,12 +1309,37 @@ echo -n $query
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtextrtf</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0\c84706\cname controlTextColor;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs26 \cf2 \{query\}}</string>
+				<key>ignoredynamicplaceholders</key>
+				<false/>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>7EC673E2-9384-474E-A43E-1FF366BA6906</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>focusedappvariable</key>
 				<false/>
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>keyword</key>
-				<string>mods</string>
+				<string>mod</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.snippet</string>
@@ -1325,6 +1363,8 @@ echo -n $query
 				<integer>1</integer>
 				<key>escaping</key>
 				<integer>102</integer>
+				<key>keyword</key>
+				<string>mods</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -1496,9 +1536,9 @@ echo -n $query
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>215</integer>
 			<key>ypos</key>
-			<integer>350</integer>
+			<integer>335</integer>
 		</dict>
 		<key>088CCB8C-6675-41AB-BA04-297DFDD61F84</key>
 		<dict>
@@ -1581,9 +1621,9 @@ echo -n $query
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<integer>405</integer>
+			<integer>380</integer>
 			<key>ypos</key>
-			<integer>480</integer>
+			<integer>465</integer>
 		</dict>
 		<key>26878E53-FCDA-43DB-AFC7-F71022C7D2BC</key>
 		<dict>
@@ -1619,9 +1659,9 @@ echo -n $query
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<integer>300</integer>
+			<integer>275</integer>
 			<key>ypos</key>
-			<integer>480</integer>
+			<integer>465</integer>
 		</dict>
 		<key>4DC7DF16-1305-4061-BDAD-B0240494F684</key>
 		<dict>
@@ -1675,7 +1715,7 @@ echo -n $query
 			<key>xpos</key>
 			<integer>1005</integer>
 			<key>ypos</key>
-			<integer>600</integer>
+			<integer>590</integer>
 		</dict>
 		<key>63B6CF29-DC56-4988-ACE3-4FD6A94AB4BB</key>
 		<dict>
@@ -1711,9 +1751,16 @@ echo -n $query
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<integer>405</integer>
+			<integer>380</integer>
 			<key>ypos</key>
-			<integer>220</integer>
+			<integer>205</integer>
+		</dict>
+		<key>7EC673E2-9384-474E-A43E-1FF366BA6906</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1145</integer>
+			<key>ypos</key>
+			<integer>905</integer>
 		</dict>
 		<key>8C9EB39E-6A81-4597-BCBB-954BFC0347C0</key>
 		<dict>
@@ -1738,7 +1785,7 @@ echo -n $query
 			<key>colorindex</key>
 			<integer>8</integer>
 			<key>xpos</key>
-			<integer>810</integer>
+			<integer>805</integer>
 			<key>ypos</key>
 			<integer>710</integer>
 		</dict>
@@ -1756,9 +1803,9 @@ echo -n $query
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<integer>295</integer>
+			<integer>270</integer>
 			<key>ypos</key>
-			<integer>220</integer>
+			<integer>205</integer>
 		</dict>
 		<key>B379D234-A7DE-429B-AA8A-0295D00A40A9</key>
 		<dict>
@@ -1785,9 +1832,9 @@ echo -n $query
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<integer>330</integer>
+			<integer>305</integer>
 			<key>ypos</key>
-			<integer>350</integer>
+			<integer>335</integer>
 		</dict>
 		<key>D764FA7A-FE21-4B1C-B0F8-ED2724350435</key>
 		<dict>
@@ -1839,9 +1886,9 @@ echo -n $query
 			<key>colorindex</key>
 			<integer>5</integer>
 			<key>xpos</key>
-			<integer>445</integer>
+			<integer>420</integer>
 			<key>ypos</key>
-			<integer>350</integer>
+			<integer>335</integer>
 		</dict>
 		<key>F5F1AD94-4C74-4BF1-899D-0318CCECD96E</key>
 		<dict>
