@@ -15,9 +15,23 @@ $ npm install --global alfred-workflow
 
 ## Usage
 
-In Alfred, type `wf`, <kbd>Enter</kbd>, and your query.
+In Alfred, type `wf` and enter your query.
 
+## Bonus Features
 
+### [icns](./src/icns.js)
+- Get system icons for your workflows from `/System/Library/CoreServices/CoreTypes.bundle/Contents/Resources/`
+- Can be pasted as path or alfy [icon](https://github.com/sindresorhus/alfy#icon) object
+```
+icon: {
+  path: alfy.icon.get('${element}')
+}
+```
+
+### Icons
+- Generate png icons from installed apps or apps from the app store.
+
+- Download favicons from websites
 ## License
 
 MIT © [Dennis Muensterer](https://muensterer.xyz)
