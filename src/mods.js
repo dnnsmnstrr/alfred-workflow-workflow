@@ -8,18 +8,18 @@ const items = alfy
 		title: item,
 		subtitle: `Create modifier object for ` + item,
 		arg: item + ': {\
-subtitle: \'{cursor}\',\
-arg: \'\'\
+  subtitle: \'{cursor}\',\
+  arg: \'\'\
 },',
 		mods: {
 			cmd: {
 				subtitle: 'Create full modifier object',
 				arg: `mods: {
-          ${item}: {
-            subtitle: '{cursor}',
-            arg: '',
-          }
-        },`
+    ${item}: {
+      subtitle: '{cursor}',
+      arg: '',
+    }
+  },`
 			}
 		}
 	}));

@@ -20,7 +20,7 @@ const getHighestRes = (icons = []) => {
   return formatItem(highestRes, 'Highest resolution')
 }
 
-if (alfy.input < 3) {
+if (url > 3 && isValidUrl(url)) {
   alfy.output([
     {
       title: 'Invalid URL',
@@ -29,7 +29,7 @@ if (alfy.input < 3) {
   ])
 } else {
   const {icons} = await alfy.fetch('http://favicongrabber.com/api/grab/' + url);
-  if (!icons) {
+  if (!icons || !icons.length) {
     alfy.output([
       {
         title: 'No icons found',
