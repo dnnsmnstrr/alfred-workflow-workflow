@@ -1,33 +1,56 @@
-const fs = require('fs');
+const alfy = require('alfy');
 
-async function readData(path) {
-	const rawData = fs.readFileSync(path);
-	const data = await JSON.parse(rawData);
-	return data;
-}
+const getAppIcon = (appName = 'Alfred') => {
+	return {
+		type: 'fileicon',
+		path: `/Applications/${appName}.app`
+	};
+};
 
-function getOptions(path = './src/options.json') {
-	const options = readData(path);
-	return options;
+const getIcon = (icon = 'AlertCautionIcon') => {
+	return {
+		path: alfy.icon.get(icon)
+	};
+};
+
+const getAsset = assetName => {
+	return {
+		path: `./assets/${assetName}.png`
+	};
+};
+
+function splitInput(splitter = ' ', input = alfy.input) {
+	return input.split(splitter);
 }
 
 function capitalize(str) {
 	return str[0].toUpperCase() + str.slice(1);
 }
 
-function splitInput(input = '', splitter = ' ') {
-	return input.split(splitter);
+function isValidUrl(string) {
+	try {
+		new URL(string);
+	} catch (_) {
+		return false;
+	}
+
+	return true;
 }
 
 module.exports = {
-	readData,
-	getOptions,
+	getIcon,
+	getAppIcon,
+	getAsset,
 	capitalize,
-	splitInput
+	splitInput,
+	isValidUrl
 };
 
 /*
-USAGE:
+IMPORT:
 const {splitInput} = require('./helper');
-const [command, domain, ...restInput] = splitInput(alfy.input)
+
+USAGE:
+const [command, ...restInput] = splitInput()
+const [input, query, ...restInput] = splitInput(':') // Custom splitter
 */

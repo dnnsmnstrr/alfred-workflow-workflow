@@ -13,7 +13,7 @@ if argument == '--list':
 
     #####################
 
-    COUNTRY = 'pl'      # specify the ISO Country code for results from your country (URL as well as price)
+    COUNTRY = 'de'      # specify the ISO Country code for results from your country (URL as well as price)
     LIMIT = 20          # the limit of displayed apps
 
     #####################
@@ -92,7 +92,7 @@ elif argument == '--mask':
             mask = Image.open('mask512.png').convert('L')
         else:
             mask = Image.open('mask.png').convert('L')
-        
+
         output = ImageOps.fit(im, mask.size, centering=(0.5,0.5))
         output.putalpha(mask)
         output.save(qr)

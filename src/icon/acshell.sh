@@ -2,6 +2,7 @@
 
 QUERY="$1"
 ARG="$2"
+BUNDLE_ID="xyz.muensterer.workflow"
 
 ###################################
 ## 1. LIST APPS TO EXTRACT ICONS ##
@@ -36,15 +37,15 @@ elif [[ "$ARG" == "--extract" ]]; then
 	argument=$(echo "$QUERY" | awk -F'^' '{print $2}')
 
 	if [[ "$qr" == "online" ]]; then
-		osascript -e 'tell application "Alfred 4" to run trigger "online" in workflow "com.dnnsmnstrr.alfred-workflow" with argument "'"$argument"'"'
-	else
+		osascript -e 'tell application id "com.runningwithcrayons.Alfred" to run trigger "online" in workflow "xyz.muensterer.workflow" with argument "'"$argument"'"'
+  else
 		appicon=$(python acpython.py "$QUERY/Contents/Info.plist" --local --icon)
 		appicon=${appicon//.icns/}
 		appname=$(python acpython.py "$QUERY/Contents/Info.plist" --local --name)
 
 		sips -s format png "$QUERY/Contents/Resources/$appicon.icns" --out "$HOME/Desktop/$appname.png"
 
-		osascript -e 'tell application "Alfred 4" to run trigger "notify" in workflow "com.dnnsmnstrr.alfred-workflow" with argument "'"$HOME/Desktop/$appname.png"'"'
+		osascript -e 'tell application id "com.runningwithcrayons.Alfred" to run trigger "notify" in workflow "xyz.muensterer.workflow" with argument "'"$HOME/Desktop/$appname.png"'"'
 	fi
 
 ###################################
