@@ -2,7 +2,7 @@
 const alfy = require('alfy');
 const {splitInput} = require('./src/helper');
 
-const [option, query] = splitInput();
+const [option, query = ''] = splitInput();
 
 const options = [
 	{
@@ -21,8 +21,8 @@ const options = [
 		arg: 'atom'
 	},
 	{
-		title: 'System Icons',
-		subtitle: 'Get Icons for Alfy Workflows',
+		title: 'icns',
+		subtitle: 'Get system icons for Alfy Workflows',
 		arg: `icns:${query}`
 	},
 	{
@@ -34,7 +34,7 @@ const options = [
 	return {
 		...item,
 		uid: item.title,
-		autocomplete: item.title.split(' ')[0]
+		autocomplete: item.title.split(' ')[0].toLowerCase()
 	};
 });
 
