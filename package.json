@@ -23,7 +23,8 @@
   "files": [
     "index.js",
     "icon.png",
-    "info.plist"
+    "info.plist",
+    "src/*"
   ],
   "keywords": [
     "alfred",
