@@ -1,13 +1,18 @@
 const alfy = require('alfy');
 const {splitInput} = require('./helper');
 
+const [input, URL] = splitInput();
+
+const DOCUMENTATION = 'cmd';
+
 const index = {
 	uid: 'index',
 	title: 'Alfy index example',
+	autocomplete: 'index',
 	subtitle: 'Example snippet using api fetch',
 	arg: `const alfy = require('alfy');
 
-const API_URL='https://jsonplaceholder.typicode.com/posts'
+const API_URL='${URL}'
 const data = await alfy.fetch(API_URL);
 
 const items = alfy
@@ -21,7 +26,7 @@ const items = alfy
 alfy.output(items);
   `,
 	mods: {
-		cmd: {
+		[DOCUMENTATION]: {
 			subtitle: 'Show source documentation',
 			arg: 'https://github.com/sindresorhus/alfy#example'
 		}
@@ -31,6 +36,7 @@ alfy.output(items);
 const handler = {
 	uid: 'handler',
 	title: 'JS handler',
+	autocomplete: 'handler',
 	subtitle: 'Handle alfy arguments in a node environment',
 	arg: `const query = process.argv[2]; // query
 const {BASE_URL} = process.env; // environment variables
@@ -43,7 +49,7 @@ const {BASE_URL} = process.env; // environment variables
 	}
 })();`,
 	mods: {
-		cmd: {
+		[DOCUMENTATION]: {
 			subtitle: 'Show source documentation',
 			arg: 'https://github.com/sindresorhus/alfy/issues/47#issuecomment-284176650'
 		}
@@ -53,6 +59,7 @@ const {BASE_URL} = process.env; // environment variables
 const item = {
 	uid: 'item',
 	title: 'Alfy item',
+	autocomplete: 'item',
 	subtitle: 'An item to be shown in the alfy output',
 	arg: `{
     title: '{cursor}',
@@ -60,15 +67,29 @@ const item = {
     arg: ''
   }`,
 	mods: {
-		cmd: {
+		[DOCUMENTATION]: {
 			subtitle: 'Show source documentation',
 			arg: 'https://github.com/sindresorhus/alfy/issues/47#issuecomment-284176650'
 		}
 	}
 };
 
-const snippets = [index, handler, item];
+const match = {
+	uid: 'matchInput',
+	title: 'Alfy input matching & handling',
+	autocomplete: 'input',
+	subtitle: 'An item to be shown in the alfy output',
+	arg: `const items = alfy.inputMatches(options, 'key')`,
+	mods: {
+		[DOCUMENTATION]: {
+			subtitle: 'Show source documentation',
+			arg: 'https://github.com/sindresorhus/alfy#inputmatcheslist-item'
+		}
+	}
+};
 
-const items = alfy.inputMatches(snippets, 'title');
+const snippets = [index, handler, item, match];
+
+const items = alfy.matches(input, snippets, 'title');
 
 alfy.output(items);
