@@ -3,12 +3,15 @@ import alfyTest from 'alfy-test';
 
 test(async t => {
 	const alfy = alfyTest();
-	const result = await alfy('Rainbow');
+	const result = await alfy('Atom');
 
 	t.deepEqual(result, [
 		{
-			title: 'Unicorn',
-			subtitle: 'Rainbow'
-		}
+  		title: 'Atom',
+  		subtitle: 'Open Workflows in Atom',
+  		arg: 'atom',
+			uid: 'Atom',
+			autocomplete: 'atom'
+  	}
 	]);
 });

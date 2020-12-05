@@ -20,7 +20,7 @@ const getHighestRes = (icons = []) => {
   return formatItem(highestRes, 'Highest resolution')
 }
 
-if (url > 3 && isValidUrl(url)) {
+if (url.length < 5 && !isValidUrl(url)) {
   alfy.output([
     {
       title: 'Invalid URL',

@@ -1,6 +1,6 @@
 {
-  "name": "alfred-workflow",
-  "version": "0.0.0",
+  "name": "alfred-workflow-workflow",
+  "version": "1.0.0",
   "description": "An alfred workflow to help making workflows with alfy",
   "license": "MIT",
   "repository": "dnnsmnstrr/alfred-workflow",
@@ -13,7 +13,7 @@
     "node": ">=4"
   },
   "scripts": {
-    "test": "xo && ava",
+    "test": "ava",
     "postinstall": "alfy-init",
     "preuninstall": "alfy-cleanup",
     "link": "./node_modules/.bin/alfred-link",
@@ -23,7 +23,8 @@
   "files": [
     "index.js",
     "icon.png",
-    "info.plist"
+    "info.plist",
+    "src/*"
   ],
   "keywords": [
     "alfred",
