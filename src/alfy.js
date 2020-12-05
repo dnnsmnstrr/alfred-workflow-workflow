@@ -115,6 +115,7 @@ const script = {
 		}
 	}
 };
+
 const readme = {
 	title: 'Alfy Readme',
 	arg: 'https://github.com/sindresorhus/alfy/',
