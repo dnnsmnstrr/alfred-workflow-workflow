@@ -1,8 +1,8 @@
-# alfred-workflow [![Build Status](https://travis-ci.org/dnnsmnstrr/alfred-workflow.svg?branch=master)](https://travis-ci.org/dnnsmnstrr/alfred-workflow)
+# alfred-workflow² [![Build Status](https://travis-ci.org/dnnsmnstrr/alfred-workflow.svg?branch=master)](https://travis-ci.org/dnnsmnstrr/alfred-workflow)
 
-> An alfred workflow to help making workflows with alfy
+> An alfred workflow including tools, snippets and resources for building workflows with [alfy](https://github.com/sindresorhus/alfy)
 
-![yo dawg](https://api.memegen.link/images/yodawg/yo_dawg,_I_heard_you_like_workflows/so_I_made_a_workflow_to_make_workflows)
+![yo dawg](https://api.memegen.link/images/yodawg/yo_dawg,_I_heard_you_like_workflows/so_I_made_a_workflow_to_help_making_workflows)
 
 ## Install
 
@@ -15,7 +15,8 @@ $ npm install --global alfred-workflow
 
 ## Usage
 
-In Alfred, type `wf` and enter your query.
+In Alfred, type `wf` and enter your query. 
+This will search your installed workflows and allow you to directly open the corresponding project in your editor.
 
 ## Bonus Features
 
@@ -31,7 +32,8 @@ icon: {
 ### Icons
 - Generate png icons from installed apps or apps from the app store.
 
-- Download favicons from websites
+- `favicon` - Download favicons from websites
+
 ## License
 
 MIT © [Dennis Muensterer](https://muensterer.xyz)

@@ -2,16 +2,21 @@ const fs = require('fs');
 const alfy = require('alfy');
 const {splitInput, enrichOptions} = require('./helper');
 
+const [input, URL] = splitInput();
+
+const DOCUMENTATION = 'cmd';
+
 const readmePath = './node_modules/alfy/readme.md';
 const githubUrl = 'https://github.com/sindresorhus/alfy/#';
 const index = {
 	uid: 'index',
 	title: 'Alfy index example',
+	autocomplete: 'index',
 	subtitle: 'Example snippet using api fetch',
 	quicklookurl: githubUrl + 'example',
 	arg: `const alfy = require('alfy');
 
-const API_URL='https://jsonplaceholder.typicode.com/posts'
+const API_URL='${URL}'
 const data = await alfy.fetch(API_URL);
 
 const items = alfy
@@ -25,7 +30,7 @@ const items = alfy
 alfy.output(items);
   `,
 	mods: {
-		cmd: {
+		[DOCUMENTATION]: {
 			subtitle: 'Show source documentation',
 			arg: githubUrl + 'example'
 		}
@@ -35,6 +40,7 @@ alfy.output(items);
 const handler = {
 	uid: 'handler',
 	title: 'JS handler',
+	autocomplete: 'handler',
 	subtitle: 'Handle alfy arguments in a node environment',
 	arg: `const query = process.argv[2]; // query
 const {BASE_URL} = process.env; // environment variables
@@ -47,7 +53,7 @@ const {BASE_URL} = process.env; // environment variables
 	}
 })();`,
 	mods: {
-		cmd: {
+		[DOCUMENTATION]: {
 			subtitle: 'Show source documentation',
 			arg: 'https://github.com/sindresorhus/alfy/issues/47#issuecomment-284176650'
 		}
@@ -57,6 +63,7 @@ const {BASE_URL} = process.env; // environment variables
 const item = {
 	uid: 'item',
 	title: 'Alfy item',
+	autocomplete: 'item',
 	subtitle: 'An item to be shown in the alfy output',
 	arg: `{
     title: '{cursor}',
@@ -65,9 +72,23 @@ const item = {
   }`,
 	quicklookurl: githubUrl + 'outputlist-options',
 	mods: {
-		cmd: {
+		[DOCUMENTATION]: {
 			subtitle: 'Show source documentation',
 			arg: 'https://github.com/sindresorhus/alfy/issues/47#issuecomment-284176650'
+		}
+	}
+};
+
+const match = {
+	uid: 'matchInput',
+	title: 'Alfy input matching & handling',
+	autocomplete: 'input',
+	subtitle: 'An item to be shown in the alfy output',
+	arg: `const items = alfy.inputMatches(options, 'key')`,
+	mods: {
+		[DOCUMENTATION]: {
+			subtitle: 'Show source documentation',
+			arg: 'https://github.com/sindresorhus/alfy#inputmatcheslist-item'
 		}
 	}
 };
@@ -101,8 +122,8 @@ const readme = {
 	quicklookurl: '/Users/dm/dotfiles/alfred/workflows/alfred-workflow/node_modules/alfy/readme.md'
 };
 
-const snippets = enrichOptions([index, handler, item, script, readme], {quicklookurl: githubUrl});
+const snippets = enrichOptions([index, handler, item, script, match, readme], {quicklookurl: githubUrl});
 
-const items = alfy.inputMatches(snippets, 'title');
+const items = alfy.matches(input, snippets, 'title');
 
 alfy.output(items);
