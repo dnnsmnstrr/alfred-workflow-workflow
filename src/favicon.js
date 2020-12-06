@@ -20,7 +20,7 @@ const getHighestRes = (icons = []) => {
   return formatItem(highestRes, 'Highest resolution')
 }
 
-if (url.length < 5 && !isValidUrl(url)) {
+if (url.length < 5 || !isValidUrl(url)) {
   alfy.output([
     {
       title: 'Invalid URL',
@@ -35,7 +35,7 @@ if (url.length < 5 && !isValidUrl(url)) {
         title: 'No icons found',
         subtitle: 'Please try a different url'
       }
-    ])
+    ], {rerunInterval: 0.1})
   } else {
     const compareIcons = (a, b) => {
       if (!a.sizes) {
@@ -49,25 +49,3 @@ if (url.length < 5 && !isValidUrl(url)) {
     alfy.output(icons.map(formatItem).sort(compareIcons))
   }
 }
-
-
-// (async () => {
-// 	try {
-// 		const url = process.argv[2] || 'test.com';
-// 		console.log('url', url);
-// 		const res = await got('http://favicongrabber.com/api/grab/' + url, {json: true});
-// 		if (res.body && res.body.icons) {
-// 			console.log('res.body.icons', res.body.icons);
-// 			const highestRes = res.body.icons.reduce((previous, current) => {
-// 				if (!previous.sizes || (current.sizes && parseInt(current.sizes.split('x')[0]) > parseInt(previous.sizes.split('x')[0]))) {
-// 					return current;
-// 				}
-// 				return previous;
-// 			});
-// 			console.log('highestRes', highestRes);
-// 		}
-// 	} catch (err) {
-// 		console.log(err);
-//         // Deal with the fact the chain failed
-// 	}
-// })();
