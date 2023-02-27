@@ -1,4 +1,3 @@
-const got = require('got');
 const alfy = require('alfy');
 const {isValidUrl} = require('./helper');
 

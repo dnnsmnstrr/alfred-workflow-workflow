@@ -29,12 +29,17 @@ const options = [
 		title: 'Search',
 		subtitle: 'Search Alfred Workflows',
 		arg: `search:${query}`
-	}
+	},
+  {
+    title: 'JSON Example',
+    subtitle: 'Show documentation for JSON Script Filter format',
+    arg: 'json'
+  }
 ].map(item => {
 	return {
 		...item,
-		uid: item.title,
-		autocomplete: item.title.split(' ')[0].toLowerCase()
+		uid: item.uid || item.title.replaceAll(' ', '').toLowerCase(),
+		autocomplete: item.title
 	};
 });
 
